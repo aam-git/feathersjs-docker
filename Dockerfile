@@ -13,4 +13,4 @@ RUN npm install
 
 EXPOSE 3030
 
-CMD ["npm", "run", "production"]
+CMD ["npm", "run", "start"]
