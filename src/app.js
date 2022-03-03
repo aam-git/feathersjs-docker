@@ -75,9 +75,6 @@ app.configure(services);
 // Set up event channels (see channels.js)
 app.configure(channels);
 
-//load extend auth system
-app.configure(require('feathers-auth-extend'));
-
 // Configure a middleware for 404s and the error handler
 app.use(express.notFound());
 app.use(express.errorHandler({
@@ -94,9 +91,6 @@ app.use(express.errorHandler({
     res.json(err);
   }
 }));
-
-
-let { Queue, Worker, QueueScheduler }  = require('bullmq');
 
 app.hooks(appHooks);
 
