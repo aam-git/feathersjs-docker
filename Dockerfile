@@ -5,7 +5,7 @@ USER root
 
 RUN npm install @feathersjs/cli -g
 
-WORKDIR /home/node/.npm
+RUN mkdir -p /home/node/.npm
 
 RUN chown -R 1000:1000 /home/node
 
