@@ -1,4 +1,4 @@
-FROM node:alpine
+FROM node:17-alpine
 LABEL maintainer="AAMServices <info@aamservices.uk>"
 
 RUN npm install @feathersjs/cli -g
