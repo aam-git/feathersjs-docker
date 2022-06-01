@@ -1,7 +1,7 @@
-FROM node:alpine
+FROM node:17-bullseye-slim
 LABEL maintainer="AAMServices <info@aamservices.uk>"
 
-RUN  npm install @feathersjs/cli -g
+RUN npm install @feathersjs/cli -g
 
 USER node
 
@@ -9,7 +9,7 @@ WORKDIR /usr/src/app
 
 COPY --chown=node:node . ./
 
-RUN  npm install
+RUN npm install
 
 EXPOSE 3030
 
