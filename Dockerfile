@@ -1,9 +1,10 @@
 FROM node:17-alpine
 LABEL maintainer="AAMServices <info@aamservices.uk>"
 
+WORKDIR /home/node/.npm
+
 RUN npm install @feathersjs/cli -g
 
-RUN mkdir /home/node/.npm
 RUN chown -R node:node /home/node
 
 USER node
