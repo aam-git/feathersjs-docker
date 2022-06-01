@@ -1,6 +1,8 @@
 FROM node:17-bullseye-slim
 LABEL maintainer="AAMServices <info@aamservices.uk>"
 
+USER root
+
 RUN npm install @feathersjs/cli -g
 
 WORKDIR /home/node/.npm
