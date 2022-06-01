@@ -1,13 +1,7 @@
-FROM node:17-bullseye-slim
+FROM node:alpine
 LABEL maintainer="AAMServices <info@aamservices.uk>"
 
-USER root
-
 RUN npm install @feathersjs/cli -g
-
-RUN mkdir -p /home/node/.npm
-
-RUN chown -R 1000:1000 /home/node
 
 USER node
 
