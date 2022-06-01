@@ -1,7 +1,7 @@
 FROM node:17-alpine
 LABEL maintainer="AAMServices <info@aamservices.uk>"
 
-RUN mkdir /home/node/npm && chown -R node:node /home/node
+RUN mkdir -p /home/node/npm && chown -R node:node /home/node
 
 RUN export npm_config_cache=/home/node/npm
 
