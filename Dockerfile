@@ -1,5 +1,7 @@
-FROM node:17-alpine
+FROM node:alpine
 LABEL maintainer="AAMServices <info@aamservices.uk>"
+
+RUN  npm install @feathersjs/cli
 
 USER node
 
@@ -7,7 +9,7 @@ WORKDIR /usr/src/app
 
 COPY --chown=node:node . ./
 
-RUN  npm install @feathersjs/cli && npm install
+RUN  npm install
 
 EXPOSE 3030
 
