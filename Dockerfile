@@ -3,6 +3,8 @@ LABEL maintainer="AAMServices <info@aamservices.uk>"
 
 RUN npm install @feathersjs/cli -g
 
+RUN mkdir /home/node/.npm && chown 1000:1000 /home/node/.npm
+
 USER node
 
 WORKDIR /usr/src/app
