@@ -5,6 +5,7 @@ RUN npm install @feathersjs/cli -g
 
 USER node
 
+WORKDIR /home/node/.npm
 WORKDIR /usr/src/app
 
 COPY --chown=node:node . ./
